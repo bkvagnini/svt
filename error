@@ -1,0 +1,107 @@
+ModuleNotFoundError: No module named 'moviepy'
+PS C:\Users\BrianVAGNINI\projects\learning\python\phrase_search_thru_movie> pip install moviepy
+Collecting moviepy
+  Using cached moviepy-1.0.3.tar.gz (388 kB)
+Requirement already satisfied: decorator<5.0,>=4.0.2 in c:\python39\lib\site-packages (from moviepy) (4.4.2)
+Requirement already satisfied: tqdm<5.0,>=4.11.2 in c:\python39\lib\site-packages (from moviepy) (4.60.0)
+Collecting requests<3.0,>=2.8.1
+  Using cached requests-2.25.1-py2.py3-none-any.whl (61 kB)
+Collecting proglog<=1.0.0
+  Using cached proglog-0.1.9.tar.gz (10 kB)
+Collecting numpy>=1.17.3
+  Using cached numpy-1.20.2-cp39-cp39-win_amd64.whl (13.7 MB)
+Collecting imageio<3.0,>=2.5
+  Using cached imageio-2.9.0-py3-none-any.whl (3.3 MB)
+Collecting imageio_ffmpeg>=0.2.0
+  Using cached imageio_ffmpeg-0.4.3-py3-none-win_amd64.whl (22.6 MB)
+Collecting urllib3<1.27,>=1.21.1
+  Using cached urllib3-1.26.4-py2.py3-none-any.whl (153 kB)
+Collecting certifi>=2017.4.17
+  Using cached certifi-2020.12.5-py2.py3-none-any.whl (147 kB)
+Collecting chardet<5,>=3.0.2
+  Using cached chardet-4.0.0-py2.py3-none-any.whl (178 kB)
+Collecting idna<3,>=2.5
+  Using cached idna-2.10-py2.py3-none-any.whl (58 kB)
+Collecting pillow
+  Using cached Pillow-8.2.0-cp39-cp39-win_amd64.whl (2.2 MB)
+Using legacy 'setup.py install' for moviepy, since package 'wheel' is not installed.
+Using legacy 'setup.py install' for proglog, since package 'wheel' is not installed.
+Installing collected packages: urllib3, certifi, chardet, idna, requests, proglog, numpy, pillow, imageio, imageio-ffmpeg, moviepy
+  WARNING: Failed to write executable - trying to use .deleteme logic
+ERROR: Could not install packages due to an EnvironmentError: [WinError 2] The system cannot find 
+the file specified: 'c:\\python39\\Scripts\\chardetect.exe' -> 'c:\\python39\\Scripts\\chardetect.exe.deleteme'
+
+WARNING: You are using pip version 20.2.3; however, version 21.0.1 is available.
+You should consider upgrading via the 'c:\python39\python.exe -m pip install --upgrade pip' command.
+PS C:\Users\BrianVAGNINI\projects\learning\python\phrase_search_thru_movie> pip freeze
+certifi==2020.12.5
+chardet==4.0.0
+decorator==4.4.2
+ffmpeg==1.4
+tqdm==4.60.0
+urllib3==1.26.4
+
+
+PS C:\Users\BrianVAGNINI\projects\learning\python\phrase_search_thru_movie> pip install wheel
+Collecting wheel
+  Downloading wheel-0.36.2-py2.py3-none-any.whl (35 kB)
+Installing collected packages: wheel
+  WARNING: Failed to write executable - trying to use .deleteme logic
+ERROR: Could not install packages due to an EnvironmentError: [WinError 2] The system cannot find the file specified: 'c:\\python39\\Scripts\\wheel.exe' -> 'c:\\python39\\Scripts\\wheel.exe.deleteme'
+
+WARNING: You are using pip version 20.2.3; however, version 21.0.1 is available.
+You should consider upgrading via the 'c:\python39\python.exe -m pip install --upgrade pip' command.
+PS C:\Users\BrianVAGNINI\projects\learning\python\phrase_search_thru_movie>
+
+Successfully built moviepy proglog
+Installing collected packages: idna, requests, proglog, numpy, pillow, imageio, imageio-ffmpeg, moviepy
+  WARNING: Failed to write executable - trying to use .deleteme logic
+ERROR: Could not install packages due to an EnvironmentError: [WinError 2] The system cannot find the file specified: 'c:\\python39\\Scripts\\f2py.exe' -> 'c:\\python39\\Scripts\\f2py.exe.deleteme'
+
+WARNING: You are using pip version 20.2.3; however, version 21.0.1 is available.
+You should consider upgrading via the 'c:\python39\python.exe -m pip install --upgrade pip' command.
+PS C:\Users\BrianVAGNINI\projects\learning\python\phrase_search_thru_movie>
+
+  Using cached Pillow-8.2.0-cp39-cp39-win_amd64.whl (2.2 MB)
+Installing collected packages: pillow, imageio, imageio-ffmpeg, moviepy
+  WARNING: Failed to write executable - trying to use .deleteme logic
+ERROR: Could not install packages due to an EnvironmentError: [WinError 2] The system cannot find the file specified: 'c:\\python39\\Scripts\\imageio_download_bin.exe' -> 'c:\\python39\\Scripts\\imageio_download_bin.exe.deleteme'
+
+WARNING: You are using pip version 20.2.3; however, version 21.0.1 is available.
+You should consider upgrading via the 'c:\python39\python.exe -m pip install --upgrade pip' command.
+PS C:\Users\BrianVAGNINI\projects\learning\python\phrase_search_thru_movie>
+
+PS C:\Users\BrianVAGNINI\projects\learning\python\phrase_search_thru_movie> pip freeze
+certifi==2020.12.5
+chardet==4.0.0
+decorator==4.4.2
+ez-setup==0.9
+ffmpeg==1.4
+idna==2.10
+imageio==2.9.0
+numpy==1.20.2
+Pillow==8.2.0
+proglog==0.1.9
+requests==2.25.1
+tqdm==4.60.0
+urllib3==1.26.4
+
+All of the above fixed by running in CMN instead of PowerShell
+
+- NEW ERROR - 
+(.speech) C:\Users\BrianVAGNINI\projects\learning\python\phrase_search_thru_movie>python3 transcribe.py
+Traceback (most recent call last):
+  File "transcribe.py", line 2, in <module>
+    import speech_recognition as sr
+ModuleNotFoundError: No module named 'speech_recognition'
+
+https://github.com/Uberi/speech_recognition/issues/294
+
+https://stackoverflow.com/questions/41797920/importerror-no-module-named-speech-recognition-in-python-idle
+
+(.speech) C:\Users\BrianVAGNINI\projects\learning\python\phrase_search_thru_movie>pip install SpeechRecognition
+Requirement already satisfied: SpeechRecognition in c:\users\brianvagnini\projects\learning\python\.speech\lib\site-packages (3.8.1)
+WARNING: You are using pip version 20.2.3; however, version 21.0.1 is available.
+You should consider upgrading via the 'c:\users\brianvagnini\projects\learning\python\.speech\scripts\python.exe -m pip install --upgrade pip' command.
+
+
